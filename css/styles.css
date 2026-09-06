@@ -223,8 +223,9 @@ ul {
   padding: 80px 24px;
   text-align: center;
   color: var(--nieve-pura);
-  background-image: linear-gradient(rgba(20, 40, 52, 0.55), rgba(20, 40, 52, 0.72)),
-                    url("../images/hero.jpg");
+  background-image:
+    linear-gradient(rgba(20, 40, 52, 0.55), rgba(20, 40, 52, 0.72)),
+    url("../images/hero.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -272,8 +273,9 @@ ul {
   padding: 72px 24px;
   text-align: center;
   color: var(--nieve-pura);
-  background-image: linear-gradient(rgba(20, 40, 52, 0.6), rgba(20, 40, 52, 0.75)),
-                    url("../images/riobamba-vista.jpg");
+  background-image:
+    linear-gradient(rgba(20, 40, 52, 0.6), rgba(20, 40, 52, 0.75)),
+    url("../images/riobamba-vista.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -664,8 +666,9 @@ legend {
   padding: 64px 24px;
   text-align: center;
   color: var(--nieve-pura);
-  background-image: linear-gradient(rgba(27, 58, 75, 0.82), rgba(27, 58, 75, 0.9)),
-                    url("../images/vicuna.jpg");
+  background-image:
+    linear-gradient(rgba(27, 58, 75, 0.82), rgba(27, 58, 75, 0.9)),
+    url("../images/vicuna.jpg");
   background-size: cover;
   background-position: center;
 }
