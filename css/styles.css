@@ -1,0 +1,835 @@
+/* ===================================================================
+   Descubre Riobamba — hoja de estilos principal
+   Agencia de turismo ficticia · Riobamba, Chimborazo, Ecuador
+   Autor: Xavier Miguel Jiménez Albán
+   Diseño de Sitios Web — UTEQ — Examen final
+   =================================================================== */
+
+/* -------------------------------------------------------------------
+   1. Variables y reinicio
+   ------------------------------------------------------------------- */
+
+:root {
+  --paramo: #1b3a4b;
+  --paramo-claro: #2c5d75;
+  --nieve: #f6f3ee;
+  --nieve-pura: #ffffff;
+  --terracota: #b4441f;
+  --terracota-claro: #d4642f;
+  --paja: #d9a441;
+  --tinta: #22201d;
+  --tinta-suave: #55504a;
+  --borde: #ded7cc;
+
+  --sombra: 0 2px 6px rgba(27, 58, 75, 0.08);
+  --sombra-alta: 0 12px 28px rgba(27, 58, 75, 0.18);
+  --radio: 10px;
+  --ancho: 1140px;
+  --transicion: 0.25s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* modelo de caja: el ancho incluye borde y relleno */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--tinta);
+  background-color: var(--nieve);
+}
+
+/* -------------------------------------------------------------------
+   2. Selectores de etiqueta: tipografía base
+   ------------------------------------------------------------------- */
+
+h1, h2, h3 {
+  font-family: "Fraunces", Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--paramo);
+}
+
+h1 { font-size: 2.9rem; }
+h2 { font-size: 2.1rem; margin-bottom: 0.6em; }
+h3 { font-size: 1.3rem; margin-bottom: 0.4em; }
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--terracota);
+  text-decoration: none;
+  transition: color var(--transicion);
+}
+
+a:hover {
+  color: var(--terracota-claro);
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+/* -------------------------------------------------------------------
+   3. Contenedores y utilidades (selectores de clase)
+   ------------------------------------------------------------------- */
+
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.seccion {
+  padding: 72px 0;
+}
+
+.seccion-clara {
+  background-color: var(--nieve-pura);
+}
+
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.subtitulo-seccion {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 48px;
+  color: var(--tinta-suave);
+}
+
+.destacado {
+  color: var(--terracota);
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------------------
+   4. Encabezado y menú de navegación (Flexbox)
+   ------------------------------------------------------------------- */
+
+.encabezado {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--nieve-pura);
+  border-bottom: 1px solid var(--borde);
+  box-shadow: var(--sombra);
+}
+
+.barra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.marca img {
+  width: 46px;
+  height: 46px;
+}
+
+.marca-nombre {
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--paramo);
+  line-height: 1.1;
+}
+
+.marca-lema {
+  display: block;
+  font-family: "Inter", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 9px 15px;
+  border-radius: 6px;
+  color: var(--paramo);
+  font-size: 0.94rem;
+  font-weight: 500;
+  transition: background-color var(--transicion), color var(--transicion);
+}
+
+/* Selector combinado: enlaces dentro del menú */
+.menu a:hover,
+.menu a:focus {
+  background-color: var(--paramo);
+  color: var(--nieve-pura);
+  text-decoration: none;
+  outline: none;
+}
+
+.menu .activo {
+  background-color: var(--terracota);
+  color: var(--nieve-pura);
+}
+
+.menu .activo:hover {
+  background-color: var(--terracota-claro);
+}
+
+/* -------------------------------------------------------------------
+   5. Sección Hero
+   ------------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 78vh;
+  padding: 80px 24px;
+  text-align: center;
+  color: var(--nieve-pura);
+  background-image: linear-gradient(rgba(20, 40, 52, 0.55), rgba(20, 40, 52, 0.72)),
+                    url("../images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-contenido {
+  max-width: 760px;
+}
+
+.hero h1 {
+  color: var(--nieve-pura);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  margin-bottom: 18px;
+}
+
+.hero-eslogan {
+  font-size: 1.35rem;
+  font-style: italic;
+  color: var(--paja);
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+}
+
+.hero-datos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin: 26px 0 32px;
+  list-style: none;
+}
+
+.hero-datos li {
+  padding: 7px 16px;
+  border: 1px solid rgba(246, 243, 238, 0.45);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  backdrop-filter: blur(2px);
+}
+
+/* Cabecera corta para las páginas interiores */
+.portada-interior {
+  padding: 72px 24px;
+  text-align: center;
+  color: var(--nieve-pura);
+  background-image: linear-gradient(rgba(20, 40, 52, 0.6), rgba(20, 40, 52, 0.75)),
+                    url("../images/riobamba-vista.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.portada-interior h1 {
+  color: var(--nieve-pura);
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.portada-interior p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #e8e2d8;
+}
+
+/* -------------------------------------------------------------------
+   6. Botones (llamado a la acción)
+   ------------------------------------------------------------------- */
+
+.boton {
+  display: inline-block;
+  padding: 14px 32px;
+  border: 2px solid var(--terracota);
+  border-radius: var(--radio);
+  background-color: var(--terracota);
+  color: var(--nieve-pura);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: var(--sombra);
+  transition: background-color var(--transicion), transform var(--transicion),
+              box-shadow var(--transicion);
+}
+
+.boton:hover,
+.boton:focus {
+  background-color: var(--terracota-claro);
+  border-color: var(--terracota-claro);
+  color: var(--nieve-pura);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-alta);
+  outline: none;
+}
+
+.boton-claro {
+  background-color: transparent;
+  border-color: var(--nieve-pura);
+  color: var(--nieve-pura);
+  margin-left: 10px;
+}
+
+.boton-claro:hover,
+.boton-claro:focus {
+  background-color: var(--nieve-pura);
+  border-color: var(--nieve-pura);
+  color: var(--paramo);
+}
+
+/* -------------------------------------------------------------------
+   7. Rejilla de tarjetas (CSS Grid)
+   ------------------------------------------------------------------- */
+
+.rejilla {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.rejilla-dos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: var(--nieve-pura);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--sombra-alta);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.tarjeta-cuerpo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 22px 24px 26px;
+}
+
+.tarjeta-cuerpo p {
+  color: var(--tinta-suave);
+  font-size: 0.95rem;
+}
+
+.etiqueta {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 10px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-color: #eef2f4;
+  color: var(--paramo-claro);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.ficha {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px dashed var(--borde);
+  font-size: 0.88rem;
+  color: var(--tinta-suave);
+  list-style: none;
+}
+
+.ficha li {
+  margin-bottom: 4px;
+}
+
+.ficha strong {
+  color: var(--paramo);
+}
+
+/* -------------------------------------------------------------------
+   8. Tarjetas de servicios y paquetes
+   ------------------------------------------------------------------- */
+
+.tarjeta-servicio {
+  border-top: 5px solid var(--paja);
+}
+
+.precio {
+  display: block;
+  margin: 8px 0 4px;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 1.85rem;
+  color: var(--terracota);
+}
+
+.precio-nota {
+  font-size: 0.8rem;
+  color: var(--tinta-suave);
+}
+
+.incluye {
+  margin: 16px 0;
+  padding-left: 4px;
+  font-size: 0.92rem;
+  color: var(--tinta-suave);
+  list-style: none;
+}
+
+.incluye li {
+  padding: 3px 0 3px 22px;
+  position: relative;
+}
+
+.incluye li::before {
+  content: "▲";
+  position: absolute;
+  left: 0;
+  color: var(--paja);
+  font-size: 0.7rem;
+}
+
+/* -------------------------------------------------------------------
+   9. Bloques de texto e imagen alternos (Flexbox)
+   ------------------------------------------------------------------- */
+
+.bloque {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+.bloque-invertido {
+  flex-direction: row-reverse;
+}
+
+.bloque-texto,
+.bloque-imagen {
+  flex: 1 1 0;
+}
+
+.bloque-imagen img {
+  width: 100%;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-alta);
+}
+
+.pie-foto {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: var(--tinta-suave);
+  text-align: center;
+}
+
+/* Valores de la agencia */
+.valores {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  list-style: none;
+}
+
+.valores li {
+  padding: 24px 20px;
+  background-color: var(--nieve-pura);
+  border-left: 4px solid var(--terracota);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+}
+
+.valores strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--paramo);
+}
+
+/* Cifras destacadas */
+.cifras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 24px;
+  padding: 36px 24px;
+  background-color: var(--paramo);
+  border-radius: var(--radio);
+  color: var(--nieve-pura);
+  text-align: center;
+  list-style: none;
+}
+
+.cifras strong {
+  display: block;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: 2.2rem;
+  color: var(--paja);
+}
+
+/* -------------------------------------------------------------------
+   10. Formulario de contacto y reserva
+   ------------------------------------------------------------------- */
+
+.formulario {
+  padding: 36px;
+  background-color: var(--nieve-pura);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-alta);
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-ancho {
+  grid-column: 1 / -1;
+}
+
+.formulario label {
+  margin-bottom: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--paramo);
+}
+
+/* Selector combinado: controles dentro del formulario */
+.formulario input,
+.formulario select,
+.formulario textarea {
+  padding: 11px 14px;
+  border: 1px solid var(--borde);
+  border-radius: 7px;
+  background-color: var(--nieve);
+  font-family: inherit;
+  font-size: 0.96rem;
+  color: var(--tinta);
+  transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+  border-color: var(--paramo-claro);
+  background-color: var(--nieve-pura);
+  box-shadow: 0 0 0 3px rgba(44, 93, 117, 0.18);
+  outline: none;
+}
+
+.formulario input:hover,
+.formulario select:hover,
+.formulario textarea:hover {
+  border-color: var(--paramo-claro);
+}
+
+.formulario textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.ayuda {
+  margin-top: 5px;
+  font-size: 0.78rem;
+  color: var(--tinta-suave);
+}
+
+fieldset {
+  padding: 18px 20px;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+
+legend {
+  padding: 0 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--paramo);
+}
+
+.opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.opcion {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.92rem;
+}
+
+.opcion input {
+  width: auto;
+  accent-color: var(--terracota);
+}
+
+/* Datos de contacto al lado del formulario */
+.datos-contacto {
+  list-style: none;
+}
+
+.datos-contacto li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+.datos-contacto strong {
+  display: block;
+  color: var(--paramo);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* -------------------------------------------------------------------
+   11. Franja de llamado a la acción
+   ------------------------------------------------------------------- */
+
+.llamado {
+  padding: 64px 24px;
+  text-align: center;
+  color: var(--nieve-pura);
+  background-image: linear-gradient(rgba(27, 58, 75, 0.82), rgba(27, 58, 75, 0.9)),
+                    url("../images/vicuna.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.llamado h2 {
+  color: var(--nieve-pura);
+}
+
+.llamado p {
+  max-width: 620px;
+  margin: 0 auto 26px;
+}
+
+/* -------------------------------------------------------------------
+   12. Pie de página
+   ------------------------------------------------------------------- */
+
+.pie {
+  padding: 52px 0 0;
+  background-color: var(--tinta);
+  color: #c9c3ba;
+  font-size: 0.9rem;
+}
+
+.pie-rejilla {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  padding-bottom: 36px;
+}
+
+.pie h3 {
+  margin-bottom: 14px;
+  color: var(--nieve-pura);
+  font-size: 1.05rem;
+}
+
+.pie ul {
+  list-style: none;
+}
+
+.pie li {
+  margin-bottom: 7px;
+}
+
+.pie a {
+  color: #c9c3ba;
+}
+
+.pie a:hover,
+.pie a:focus {
+  color: var(--paja);
+}
+
+.pie-legal {
+  padding: 18px 0;
+  border-top: 1px solid #3b3733;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #8d867e;
+}
+
+/* -------------------------------------------------------------------
+   13. Diseño responsive — Media Queries
+   ------------------------------------------------------------------- */
+
+/* Tablet: hasta 992 px */
+@media (max-width: 992px) {
+  .rejilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .valores {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pie-rejilla {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bloque {
+    gap: 32px;
+  }
+
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 1.85rem; }
+}
+
+/* Teléfono móvil: hasta 768 px */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .barra {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .rejilla,
+  .rejilla-dos,
+  .campos,
+  .valores,
+  .pie-rejilla {
+    grid-template-columns: 1fr;
+  }
+
+  /* Las columnas se apilan: la imagen queda siempre debajo del texto */
+  .bloque,
+  .bloque-invertido {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .hero {
+    min-height: 62vh;
+    padding: 56px 20px;
+  }
+
+  .seccion {
+    padding: 48px 0;
+  }
+
+  .formulario {
+    padding: 24px 20px;
+  }
+
+  .boton-claro {
+    margin-left: 0;
+    margin-top: 12px;
+  }
+
+  .campo-ancho {
+    grid-column: auto;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+}
+
+/* Móvil pequeño: hasta 480 px */
+@media (max-width: 480px) {
+  .contenedor {
+    padding: 0 16px;
+  }
+
+  .tarjeta img {
+    height: 180px;
+  }
+
+  .boton {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-datos li {
+    font-size: 0.8rem;
+  }
+
+  h1 { font-size: 1.7rem; }
+}
