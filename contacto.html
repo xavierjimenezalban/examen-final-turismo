@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contacta con Descubre Riobamba: solicita una cotización, reserva un paquete turístico o pregúntanos lo que necesites sobre Riobamba y Chimborazo.">
+  <meta name="author" content="Xavier Miguel Jiménez Albán">
+  <title>Contacto y reservas | Descubre Riobamba</title>
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor barra">
+      <a class="marca" href="index.html">
+        <img src="images/logo.svg" alt="Logotipo de Descubre Riobamba">
+        <span class="marca-nombre">
+          Descubre Riobamba
+          <span class="marca-lema">Agencia de turismo · Chimborazo</span>
+        </span>
+      </a>
+      <nav aria-label="Menú principal">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="destinos.html">Lugares turísticos</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a class="activo" href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="portada-interior">
+      <h1>Contacto y reservas</h1>
+      <p>
+        Completa el formulario con las fechas y el tipo de experiencia que buscas.
+        Respondemos en menos de 24 horas con una propuesta de itinerario y precio.
+      </p>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor">
+        <div class="rejilla-dos">
+
+          <!-- Formulario -->
+          <div>
+            <h2>Solicita tu cotización</h2>
+            <p>
+              Todos los campos marcados con <span class="destacado">*</span> son
+              obligatorios. No realizamos cobros en línea; la reserva se confirma por
+              correo electrónico.
+            </p>
+
+            <form class="formulario" action="#" method="post" novalidate>
+
+              <div class="campos">
+
+                <!-- Nombre -->
+                <div class="campo">
+                  <label for="nombre">Nombre completo *</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="María López" required
+                         minlength="2" autocomplete="name">
+                </div>
+
+                <!-- Correo -->
+                <div class="campo">
+                  <label for="correo">Correo electrónico *</label>
+                  <input type="email" id="correo" name="correo" placeholder="maria@ejemplo.com" required
+                         autocomplete="email">
+                </div>
+
+                <!-- Teléfono -->
+                <div class="campo">
+                  <label for="telefono">Teléfono *</label>
+                  <input type="tel" id="telefono" name="telefono" placeholder="+593 99 123 4567" required
+                         autocomplete="tel">
+                  <span class="ayuda">Con código de país si llamas desde fuera del Ecuador.</span>
+                </div>
+
+                <!-- Destino o actividad -->
+                <div class="campo">
+                  <label for="destino">Destino o actividad *</label>
+                  <select id="destino" name="destino" required>
+                    <option value="" disabled selected>Selecciona una opción</option>
+                    <option value="chimborazo">Ascenso al volcán Chimborazo</option>
+                    <option value="altar">Trekking a El Altar</option>
+                    <option value="ciclismo">Descenso en bicicleta</option>
+                    <option value="patrimonial">City tour patrimonial</option>
+                    <option value="gastronomico">Ruta gastronómica</option>
+                    <option value="colta-guano">Colta, Balbanera y Guano</option>
+                    <option value="combinado">Itinerario a medida</option>
+                  </select>
+                </div>
+
+                <!-- Fecha -->
+                <div class="campo">
+                  <label for="fecha">Fecha de viaje *</label>
+                  <input type="date" id="fecha" name="fecha" required>
+                  <span class="ayuda">Fecha aproximada de llegada a Riobamba.</span>
+                </div>
+
+                <!-- Número de personas -->
+                <div class="campo">
+                  <label for="personas">Número de personas *</label>
+                  <input type="number" id="personas" name="personas" min="1" max="20" placeholder="2" required>
+                </div>
+
+                <!-- Tipo de servicio -->
+                <div class="campo-ancho">
+                  <fieldset>
+                    <legend>Tipo de servicio *</legend>
+                    <div class="opciones">
+                      <label class="opcion">
+                        <input type="radio" name="tipo-servicio" value="compartido" required>
+                        Grupal compartido
+                      </label>
+                      <label class="opcion">
+                        <input type="radio" name="tipo-servicio" value="privado">
+                        Privado
+                      </label>
+                      <label class="opcion">
+                        <input type="radio" name="tipo-servicio" value="corporativo">
+                        Corporativo / evento
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+
+                <!-- Mensaje -->
+                <div class="campo campo-ancho">
+                  <label for="mensaje">Mensaje</label>
+                  <textarea id="mensaje" name="mensaje" rows="5"
+                            placeholder="Cuéntanos cualquier detalle: fechas flexibles, necesidades especiales, nivel de experiencia en montaña…"></textarea>
+                </div>
+
+              </div>
+
+              <p style="margin-top: 24px;">
+                <button type="submit" class="boton">Enviar solicitud</button>
+              </p>
+
+            </form>
+          </div>
+
+          <!-- Datos de contacto -->
+          <div>
+            <h2>Datos de contacto</h2>
+            <p>
+              Si prefieres escribirnos directamente o llamar, estos son nuestros
+              canales. Atendemos de lunes a sábado, de 08:00 a 18:00 (hora de Ecuador).
+            </p>
+
+            <ul class="datos-contacto">
+              <li>
+                <strong>Dirección</strong>
+                Primera Constituyente y Espejo, oficina 3-A<br>
+                Riobamba, Chimborazo, Ecuador
+              </li>
+              <li>
+                <strong>Teléfono</strong>
+                <a href="tel:+59332960000">(+593) 3 296 0000</a>
+              </li>
+              <li>
+                <strong>Correo electrónico</strong>
+                <a href="mailto:hola@descubreriobamba.ec">hola@descubreriobamba.ec</a>
+              </li>
+              <li>
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/593991234567">+593 99 123 4567</a>
+              </li>
+              <li>
+                <strong>Horario</strong>
+                Lunes a viernes: 08:00 – 18:00<br>
+                Sábados: 09:00 – 14:00<br>
+                Domingos y feriados: cerrado
+              </li>
+            </ul>
+
+            <div style="margin-top: 32px;">
+              <img src="images/parque-maldonado.jpg" alt="Parque Maldonado en el centro de Riobamba" style="border-radius: 10px;">
+              <p class="pie-foto">
+                Nuestra oficina queda a una cuadra del Parque Maldonado, en pleno
+                centro histórico.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="llamado">
+      <h2>¿Solo quieres explorar?</h2>
+      <p>
+        Revisa nuestros destinos y paquetes antes de decidir. Cuando tengas claro qué
+        te llama, vuelve aquí y armamos tu viaje.
+      </p>
+      <a class="boton" href="destinos.html">Ver lugares turísticos</a>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-rejilla">
+        <div>
+          <h3>Descubre Riobamba</h3>
+          <p>
+            Agencia de turismo receptivo especializada en la provincia de Chimborazo.
+            Patrimonio, gastronomía, naturaleza y turismo de montaña.
+          </p>
+          <p><small>Proyecto académico ficticio — Universidad Técnica Estatal de Quevedo.</small></p>
+        </div>
+        <div>
+          <h3>Navegación</h3>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="destinos.html">Lugares turísticos</a></li>
+            <li><a href="servicios.html">Servicios y paquetes</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto y reservas</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <ul>
+            <li>Primera Constituyente y Espejo<br>Riobamba, Chimborazo</li>
+            <li><a href="tel:+59332960000">(+593) 3 296 0000</a></li>
+            <li><a href="mailto:hola@descubreriobamba.ec">hola@descubreriobamba.ec</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="pie-legal">
+        © 2026 Descubre Riobamba · Sitio desarrollado por Xavier Miguel Jiménez Albán ·
+        Fotografías de Wikimedia Commons con licencia Creative Commons.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
