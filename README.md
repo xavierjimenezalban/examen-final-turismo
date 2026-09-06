@@ -39,7 +39,7 @@ libre.
 ## Estructura del proyecto
 
 ```
-examen-final-turismo-riobamba/
+examen-final-turismo/
 ├── index.html          ← Página de inicio
 ├── destinos.html       ← Lugares turísticos (8 atractivos)
 ├── servicios.html      ← Servicios y paquetes (6 programas)
@@ -50,6 +50,7 @@ examen-final-turismo-riobamba/
 │   └── styles.css      ← Hoja de estilos única
 └── images/
     ├── logo.svg
+    ├── captura-sitio.jpg
     ├── hero.jpg
     ├── chimborazo.jpg
     ├── altar.jpg
@@ -68,7 +69,7 @@ examen-final-turismo-riobamba/
 
 ## Captura del sitio
 
-![Página de inicio de Descubre Riobamba](images/hero.jpg)
+![Página de inicio de Descubre Riobamba publicada en GitHub Pages](images/captura-sitio.jpg)
 
 ## Sitio publicado
 
