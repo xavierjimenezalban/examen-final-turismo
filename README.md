@@ -72,7 +72,7 @@ examen-final-turismo-riobamba/
 
 ## Sitio publicado
 
-🔗 **URL:** https://xavierjimenezalban.github.io/examen-final-turismo-riobamba/
+🔗 **URL:** https://xavierjimenezalban.github.io/examen-final-turismo/
 
 ## Licencia de las imágenes
 
